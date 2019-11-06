@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">pruebaTresEnRaya</string>
+    <string name="resultados">Resultados</string>
+    <string name="configuraci_n">Configuración</string>
 </resources>
