@@ -45,7 +45,7 @@ public class Principal extends AppCompatActivity {
     {
         if (rbX1.isChecked() == rbX2.isChecked() && (rbX1.isChecked()|| rbX2.isChecked())){
             rbO1.setChecked(true);
-        }else if ()
+        }
     }
 
 
