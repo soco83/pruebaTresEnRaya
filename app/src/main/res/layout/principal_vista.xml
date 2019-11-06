@@ -8,7 +8,7 @@
 
 
     <EditText
-        android:id="@+id/textView4"
+        android:id="@+id/etNombre1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -20,63 +20,63 @@
         app:layout_constraintVertical_bias="0.209" />
 
     <RadioGroup
-        android:id="@+id/radioGroup8"
+        android:id="@+id/rgJugador2"
         android:layout_width="154dp"
         android:layout_height="62dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5">
+        app:layout_constraintTop_toBottomOf="@+id/etNombre2">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbO2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbX2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RadioButton" />
     </RadioGroup>
 
     <RadioGroup
-        android:id="@+id/radioGroup7"
+        android:id="@+id/rgJugador1"
         android:layout_width="155dp"
         android:layout_height="64dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="70dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toBottomOf="@+id/etNombre1">
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rbO1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/rbX1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RadioButton" />
     </RadioGroup>
 
     <EditText
-        android:id="@+id/textView5"
+        android:id="@+id/etNombre2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
         android:hint="Jugador 2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
+        app:layout_constraintTop_toTopOf="@+id/etNombre1" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bJugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
