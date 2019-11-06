@@ -3,8 +3,6 @@ package com.ruben.pruebatresenraya;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -31,14 +29,6 @@ public class Principal extends AppCompatActivity {
         rbO2 = (RadioButton) findViewById(R.id.rbO2);
         rbX2 = (RadioButton) findViewById(R.id.rbX2);
     }
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_juego, menu);
-        return  true;
-    }
-
-
 
 
 
