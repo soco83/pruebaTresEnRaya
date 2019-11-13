@@ -33,7 +33,7 @@ public class Principal extends AppCompatActivity {
         rbX2 = (RadioButton) findViewById(R.id.rbX2);
     }
 
-    /* metodos  para cambiar el radioButton si los dos jugadores elijen el mismo tipo. */
+    //metodos  para cambiar el radioButton si los dos jugadores elijen el mismo tipo.
     public void verifChekedO(View view){
         if (rbO1.isChecked() == rbO2.isChecked() && (rbO1.isChecked()|| rbO2.isChecked())){
             rbX1.setChecked(true);
@@ -47,21 +47,36 @@ public class Principal extends AppCompatActivity {
             rbO1.setChecked(true);
         }
     }
+    private boolean verifTipoJugador()
+    {
+        boolean tipoJugador = true;
+        if (rbO1.isChecked())
+        {
+           tipoJugador = true;
+        }else if (rbX1.isChecked())
+        {
+            tipoJugador = false;
+        }
+        return tipoJugador;
+    }
 
 
     //metodo que inicia la actividad del juego.
     public void iniciar(View view) {
         if (etNombre1.getText().toString().isEmpty()&& etNombre2.getText().toString().isEmpty()) {
-            Toast t = Toast.makeText(this, "Se tiene que colocar nombre a los dos jugadores", Toast.LENGTH_LONG);
+            Toast t = Toast.makeText(this, "Se tiene que colocar nombre a los dos jugadores", Toast.LENGTH_SHORT);
             t.show();
 
         }else{
             Intent intent = new Intent(this,Juego.class);
+            boolean tipoJugador = verifTipoJugador();
+
             String nombre1 = etNombre1.getText().toString();
             String nombre2 = etNombre2.getText().toString();
 
             intent.putExtra("jugador1",nombre1);
             intent.putExtra("jugador2",nombre2);
+            intent.putExtra("tipoJugador",tipoJugador);
             startActivity(intent);
 
         }

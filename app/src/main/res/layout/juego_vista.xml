@@ -7,10 +7,9 @@
     tools:context=".Juego">
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/bJuego6"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.823"
@@ -19,32 +18,27 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/bJuego5"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/bJuego2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.342"
+        tools:layout_editor_absoluteX="156dp" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/bJuego9"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.819"
@@ -53,45 +47,44 @@
         app:layout_constraintVertical_bias="0.659" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/bJuego7"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.659" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/bJuego4"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/bJuego3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="Button"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/bJuego2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.342" />
+
+    <Button
+        android:id="@+id/bJuego8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -100,14 +93,22 @@
         app:layout_constraintVertical_bias="0.659" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/bJuego1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintEnd_toStartOf="@+id/bJuego2"
+        app:layout_constraintHorizontal_bias="0.982"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.343" />
+
+    <Button
+        android:id="@+id/bRejugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Button"
+        app:layout_constraintTop_toBottomOf="@+id/bJuego8"
+        tools:layout_editor_absoluteX="168dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
