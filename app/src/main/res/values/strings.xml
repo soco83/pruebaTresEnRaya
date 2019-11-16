@@ -2,4 +2,5 @@
     <string name="app_name" translatable="false">pruebaTresEnRaya</string>
     <string name="resultados">Resultados</string>
     <string name="configuraci_n">Configuración</string>
+    <string name="victoria">GANADOR!!</string>
 </resources>
