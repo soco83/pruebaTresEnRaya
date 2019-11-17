@@ -9,6 +9,10 @@
     <string name="hint1">Jugador 1</string>
     <string name="hint2">Jugador 2</string>
     <string name="boton_iniciar">Jugar</string>
-
+    <!-- actividad Juego-->
     <string name="victoria">Ganador</string>
+    <string name="turno">Turno del jugador:</string>
+    <string name="reJugar">Volver a jugar</string>
+    <!--actividad Resultado-->
+    <string name="tituloR">Resultados</string>
 </resources>

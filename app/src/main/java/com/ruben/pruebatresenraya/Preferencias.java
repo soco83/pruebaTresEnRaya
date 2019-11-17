@@ -19,4 +19,6 @@ public class Preferencias extends PreferenceActivity  {
 
 
     }
+
+
 }

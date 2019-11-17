@@ -58,7 +58,8 @@ public class Principal extends AppCompatActivity {
             return true;
 
         }else if (id == R.id.resultados){
-
+            startActivity(new Intent(this,Resultado.class));
+            return true;
 
         }
         return super.onOptionsItemSelected(item);
@@ -100,9 +101,10 @@ public class Principal extends AppCompatActivity {
 
 
         if (guardar.equals("Memoria interna")){
-            Toast.makeText(this,"hola", Toast.LENGTH_LONG).show();
+            Resultado.modoLectura = true;
+
         }else{
-            Toast.makeText(this,"hola", Toast.LENGTH_LONG).show();
+            Resultado.modoLectura = false;
         }
 
 

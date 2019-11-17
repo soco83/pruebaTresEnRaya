@@ -55,6 +55,7 @@ public class Escritura {
             File dir = android.os.Environment.getExternalStorageDirectory();
             dirAlmacExt=dir.getAbsolutePath();
 
+
         }
 
         return respuesta;
@@ -101,7 +102,7 @@ public class Escritura {
         //Comprobar que hay memoria externa y que se puede escribir.
         if (hayFicheroExterno) {
 
-            try {
+                try {
 
                 File directorio = new File (dirAlmacExt + "/resultadosTresEnRaya");
                 directorio.mkdirs();
