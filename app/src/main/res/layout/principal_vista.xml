@@ -4,28 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#406B42"
     tools:context=".Principal">
 
 
-    <EditText
-        android:id="@+id/etNombre1"
+    <TextView
+        android:id="@+id/tv_titulo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
+        android:text="JUGADOR 1"
+        android:textColor="#F7F2F2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="casual"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.37" />
+
+    <TextView
+        android:id="@+id/tv_titulo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JUGADOR 2"
+        android:textColor="#F7F2F2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="casual"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.37" />
+
+    <EditText
+        android:id="@+id/etNombre1"
+        android:layout_width="164dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
         android:hint="Jugador 1"
+        android:textColor="#F8F5F5"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.209" />
+        app:layout_constraintVertical_bias="0.472" />
 
     <RadioGroup
         android:id="@+id/rgJugador2"
-        android:layout_width="154dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_width="55dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNombre2">
 
@@ -34,23 +70,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="verifChekedO"
-            android:text="RadioButton" />
+            android:text="O" />
 
         <RadioButton
             android:id="@+id/rbX2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="verifChekedX"
-            android:text="RadioButton" />
+            android:text="X" />
     </RadioGroup>
 
     <RadioGroup
         android:id="@+id/rgJugador1"
-        android:layout_width="155dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="55dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNombre1">
 
@@ -59,23 +95,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="verifChekedO"
-            android:text="RadioButton" />
+            android:text="O" />
 
         <RadioButton
             android:id="@+id/rbX1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="verifChekedX"
-            android:text="RadioButton" />
+            android:text="X" />
+
     </RadioGroup>
 
     <EditText
         android:id="@+id/etNombre2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
+        android:layout_width="164dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         android:hint="Jugador 2"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/etNombre1" />
 
@@ -93,11 +131,26 @@
         android:text="Jugar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="1.0" />
 
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡ TRES EN RAYA !"
+        android:textColor="#F7F2F2"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:fontFamily="casual"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.164" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
