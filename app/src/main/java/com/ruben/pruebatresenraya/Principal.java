@@ -1,9 +1,12 @@
 package com.ruben.pruebatresenraya;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,6 +34,26 @@ public class Principal extends AppCompatActivity {
         rbX1 = (RadioButton) findViewById(R.id.rbX1);
         rbO2 = (RadioButton) findViewById(R.id.rbO2);
         rbX2 = (RadioButton) findViewById(R.id.rbX2);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_juego,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.config){
+            startActivity(new Intent(this,Preferencias.class));
+            return true;
+
+        }else if (id == R.id.resultados){
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     //metodos  para cambiar el radioButton si los dos jugadores elijen el mismo tipo.

@@ -3,13 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:icon="@android:drawable/ic_menu_manage"
+        android:id="@+id/resultados"
         android:title="@string/resultados"
         app:showAsAction="never" />
 
 
     <item
+        android:id="@+id/config"
         android:icon="@android:drawable/ic_menu_manage"
-        android:title="@string/configuraci_n" />
+        android:title="@string/configuraci_n"
+        app:showAsAction="ifRoom" />
 
 </menu>
