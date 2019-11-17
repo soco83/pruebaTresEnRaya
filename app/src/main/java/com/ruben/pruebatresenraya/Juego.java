@@ -1,13 +1,14 @@
 package com.ruben.pruebatresenraya;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Juego extends AppCompatActivity {
 
@@ -48,13 +49,14 @@ public class Juego extends AppCompatActivity {
 
 
             if (turno) {
-
+                boton.setTextColor(Color.parseColor("#FF0B0B"));
                 boton.setText(jugador1.getTipo().toString());
                 boton.setClickable(false);
                 boton.setTag(1);
                 ganar(boton);
                 turno = false;
             } else if (!turno) {
+                boton.setTextColor(Color.parseColor("#0B29FF"));
                 boton.setText(jugador2.getTipo().toString());
                 boton.setClickable(false);
                 boton.setTag(2);
@@ -123,16 +125,16 @@ public class Juego extends AppCompatActivity {
     private void ganar(Button boton) {
         String ganador;
 
-        if (comprobarVictoria() && turno) { //victoria jugador1
+        if (comprobarVictoria2() && turno) { //victoria jugador1
             ganador = "Victoria: " + jugador1.getNombre() + " || Derrota: " + jugador2.getNombre();
-            finalPartida(ganador, jugador1.getNombre().toString(), comprobarVictoria());
-        } else if (comprobarVictoria() && !turno) { //victoria jugador2
+            finalPartida(ganador, jugador1.getNombre().toString(), comprobarVictoria2());
+        } else if (comprobarVictoria2() && !turno) { //victoria jugador2
             ganador = "Victoria: " + jugador2.getNombre() + " || Derrota: " + jugador1.getNombre();
-            finalPartida(ganador, jugador2.getNombre().toString(), comprobarVictoria());
-        } else if (contador == 9 && !comprobarVictoria()) { //empate
+            finalPartida(ganador, jugador2.getNombre().toString(), comprobarVictoria2());
+        } else if (contador == 9 && !comprobarVictoria2()) { //empate
             ganador = jugador1.getNombre() + " | EMPATE | " + jugador2.getNombre();
             String nombre = "EMPATE";
-            finalPartida(ganador, nombre, comprobarVictoria());
+            finalPartida(ganador, nombre, comprobarVictoria2());
         }
 
     }
@@ -144,6 +146,7 @@ public class Juego extends AppCompatActivity {
     private void finalPartida(String ganador, String nombre, boolean haGanado) {
         try {
 
+            //Ha ganado un jugador
             if (haGanado == true) {
                 tv_nombre.setText(nombre);
                 tv_nombre.setVisibility(View.VISIBLE);
@@ -160,6 +163,7 @@ public class Juego extends AppCompatActivity {
                 boton9.setClickable(false);
 
 
+                //Ha habido un empate
             } else {
                 tv_ganador.setText(nombre);
                 tv_ganador.setVisibility(View.VISIBLE);
