@@ -28,6 +28,7 @@ public class Escritura {
 
 
     public boolean compruebaAlmacenamientoExt(){
+
         // Obtenemos el estado del almacenamiento externo del tel�fono
         String estado = Environment.getExternalStorageState();
 
@@ -64,6 +65,8 @@ public class Escritura {
 
     public ArrayList<String> leerAlamacenamientoExterno() {
 
+        partidas.clear();
+
         try {
 
             fichero = new File(dirAlmacExt + "/resultadosTresEnRaya", "ficheroExterno.txt");
@@ -93,8 +96,10 @@ public class Escritura {
 
     public void escribirAlmacenamientoExterno(String registro) {
 
+        boolean hayFicheroExterno = compruebaAlmacenamientoExt();
+
         //Comprobar que hay memoria externa y que se puede escribir.
-        if (hayAlmacenamientoExt && almacenamientoExtEscritura) {
+        if (hayFicheroExterno) {
 
             try {
 
@@ -149,7 +154,7 @@ public class Escritura {
 
         try {
 
-            OutputStreamWriter osw = new OutputStreamWriter(ctx.openFileOutput("ficheroInterno.txt", Context.MODE_PRIVATE));
+            OutputStreamWriter osw = new OutputStreamWriter(ctx.openFileOutput("ficheroInterno.txt", Context.MODE_APPEND));
             osw.write(partida);
             osw.close();
 
