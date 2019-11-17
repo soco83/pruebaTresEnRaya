@@ -62,78 +62,81 @@ public class Escritura {
 
 
 
-    public void leerAlamacenamientoExterno() {
+    public ArrayList<String> leerAlamacenamientoExterno() {
 
-        try
-        {
-            fichero = new File(dirAlmacExt + "/ejemplo_curso_Mentor", "prueba_sd.txt");
-            BufferedReader fin = new BufferedReader(new InputStreamReader(new FileInputStream(fichero)));
+        try {
 
-            // resultado.append("- Abrimos fichero '"+ dirAlmacExt + "/ejemplo_curso_Mentor/fichero_externo.txt' para lectura de memoria externa");
-            String texto = fin.readLine();
-            // resultado.append("\n\n- Leemos el contenido del fichero:\n");
-            //resultado.append(texto);
-            fin.close();
-            //  resultado.append("\n\n- Cerramos fichero");
-        }
-        catch (Exception ex)
-        {
+            fichero = new File(dirAlmacExt + "/resultadosTresEnRaya", "ficheroExterno.txt");
+            BufferedReader filein = new BufferedReader(new InputStreamReader(new FileInputStream(fichero)));
+            String registro = filein.readLine();
+
+            while (registro != null){
+
+                partidas.add(registro);
+                registro = filein.readLine();
+
+            }
+
+            filein.close();
+
+        } catch (Exception ex) {
+
             Log.e("Ficheros", "Error al leer fichero de memoria externa");
-            //resultado.append("Error al leer fichero de memoria externa");
+
         }
+
+        return partidas;
+
     } //END leerAlamacenamientoExterno
 
-    public void escribirAlmacenamientoExterno() {
 
-        //Si la memoria externa est� disponible y se puede escribir
-        if (hayAlmacenamientoExt && almacenamientoExtEscritura)
-        {
-            try
-            {
-                // Creamos un directorio de prueba
-                File directorio = new File (dirAlmacExt + "/ejemplo_curso_Mentor");
+
+    public void escribirAlmacenamientoExterno(String registro) {
+
+        //Comprobar que hay memoria externa y que se puede escribir.
+        if (hayAlmacenamientoExt && almacenamientoExtEscritura) {
+
+            try {
+
+                File directorio = new File (dirAlmacExt + "/resultadosTresEnRaya");
                 directorio.mkdirs();
-                //resultado.append("- Creamos el directorio " + dirAlmacExt + "/ejemplo_curso_Mentor");
-                // Abrimos in fichero en el ra�z de la tarjeta SD
-                File fichero = new File(directorio, "prueba_sd.txt");
+                File fichero = new File(directorio, "ficheroExterno.txt");
                 OutputStreamWriter fout = new OutputStreamWriter(new FileOutputStream(fichero));
-                //resultado.append("\n\n- Abrimos fichero '" + dirAlmacExt + "/ejemplo_curso_Mentor/fichero_externo.txt' para escritura en memoria externa");
-                fout.write("Caminante no hay camino se hace camino al andar...");
-                //resultado.append("\n\n- Escribimos los datos");
+                fout.write(registro);
                 fout.close();
-                //resultado.append("\n\n- Cerramos fichero");
-            }
-            catch (Exception ex)
-            {
+
+            } catch (Exception ex) {
+
                 Log.e("Ficheros", "Error al escribir fichero en memoria externa");
-                //resultado.append("Error al escribir fichero en memoria externa");
+
             }
-        }  //resultado.append("No hay almacenamiento externo disponible o no se puede escribir en �l.");
+
+        }
 
     } //END escribirAlmacenamientoExterno
 
 
-    public ArrayList<String> leerMemoriaInterna() {
+    public ArrayList<String> leerMemoriaInterna(Context ctx) {
 
         partidas.clear();
 
-
-
         try
         {
-            //BufferedReader filein = new BufferedReader(new InputStreamReader(openFileInput()));
+            BufferedReader filein = new BufferedReader(new InputStreamReader(ctx.openFileInput("ficheroInterno.txt")));
+            String registro = filein.readLine();
 
-            //String texto = filein.readLine();
-            //resultado.append("- Abrimos archivo 'fichero_interno.txt'");
-            //resultado.append("\n\n- Leemos el contenido del fichero:\n");
-            //resultado.append(texto);
-            //filein.close();
-            //resultado.append("'\n\n- Cerramos el archivo");
-        }
-        catch (Exception ex)
-        {
+            while (registro != null){
+
+                partidas.add(registro);
+                registro = filein.readLine();
+
+            }
+
+            filein.close();
+
+        } catch (Exception ex) {
+
             Log.e("Ficheros", "Error al leer fichero de memoria interna");
-            // resultado.append("Error al leer fichero en memoria interna");
         }
 
         return partidas;
@@ -144,17 +147,16 @@ public class Escritura {
 
     public void escribirMemoriaInterna(Context ctx, String partida) {
 
-        try
-        {
+        try {
+
             OutputStreamWriter osw = new OutputStreamWriter(ctx.openFileOutput("ficheroInterno.txt", Context.MODE_PRIVATE));
             osw.write(partida);
             osw.close();
-            //resultado.append("- Abrimos fichero 'fichero_interno.txt' para escribir datos en memoria interna");
 
-            //resultado.append("\n\n- Cerramos fichero");
         } catch (Exception ex) {
+
             Log.e("Fichero", "Error al escribir fichero en memoria interna");
-            //resultado.append("Error al escribir fichero en memoria interna");
+
         }
 
     }// END escribirMemoriaInterna
