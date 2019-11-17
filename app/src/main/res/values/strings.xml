@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name" translatable="false">pruebaTresEnRaya</string>
+    <!--actividad principal  -->
     <string name="resultados">Resultados</string>
     <string name="configuraci_n">Configuración</string>
-    <string name="victoria">GANADOR!!</string>
+    <string name="titulo">¡Tres en raya!</string>
+    <string name="jugador1">Jugador</string>
+    <string name="jugador2">Jugador 2</string>
+    <string name="hint1">Jugador 1</string>
+    <string name="hint2">Jugador 2</string>
+    <string name="boton_iniciar">Jugar</string>
+
+    <string name="victoria">Ganador</string>
 </resources>

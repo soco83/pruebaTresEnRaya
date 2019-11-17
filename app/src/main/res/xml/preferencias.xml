@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Guardar" />
-    <CheckBoxPreference
-        android:defaultValue="false"
-        android:key="cb_memoria_interna"
-        android:title="memoria interna" />
-    <CheckBoxPreference
-        android:defaultValue="false"
-        android:key="cb_sd"
-        android:title="SD" />
-    <PreferenceCategory android:title="Idioma">
-
-    </PreferenceCategory>
-    <CheckBoxPreference
-        android:defaultValue="false"
-        android:key="cb_espannol"
-        android:title="español" />
-    <CheckBoxPreference
-        android:defaultValue="false"
-        android:key="cb_ingles"
-        android:title="Ingles" />
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/tipo_guardado"
+        android:entryValues="@array/tipo_guardado"
+        android:key="LGuardar"
+        android:title="Lugar de guardado" />
 </PreferenceScreen>

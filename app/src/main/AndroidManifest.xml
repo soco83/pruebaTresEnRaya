@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Juego"></activity>
-        <activity android:name=".Preferencias"></activity>
+        <activity android:name=".Resultado"></activity>
+        <activity android:name=".Juego" />
+        <activity android:name=".Preferencias" />
         <activity android:name=".Principal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

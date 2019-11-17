@@ -4,13 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Principal extends AppCompatActivity {
@@ -22,7 +25,7 @@ public class Principal extends AppCompatActivity {
     private RadioButton rbX1;
     private RadioButton rbO2;
     private RadioButton rbX2;
-
+    private TextView tv_titulo,tv_jugador1,tv_jugador2;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,10 @@ public class Principal extends AppCompatActivity {
         rbX1 = (RadioButton) findViewById(R.id.rbX1);
         rbO2 = (RadioButton) findViewById(R.id.rbO2);
         rbX2 = (RadioButton) findViewById(R.id.rbX2);
+        tv_titulo = (TextView) findViewById(R.id.tv_titulo);
+        tv_jugador1 = (TextView) findViewById(R.id.tv_titulo2);
+        tv_jugador2 = (TextView) findViewById(R.id.tv_titulo3);
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
@@ -51,6 +58,7 @@ public class Principal extends AppCompatActivity {
             return true;
 
         }else if (id == R.id.resultados){
+
 
         }
         return super.onOptionsItemSelected(item);
@@ -81,6 +89,23 @@ public class Principal extends AppCompatActivity {
             tipoJugador = false;
         }
         return tipoJugador;
+    }
+
+    public void onResume(){
+        super.onResume();
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        String guardar = prefs.getString("LGuardar","-1");
+
+
+        if (guardar.equals("Memoria interna")){
+            Toast.makeText(this,"hola", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(this,"hola", Toast.LENGTH_LONG).show();
+        }
+
+
     }
 
 
