@@ -20,6 +20,7 @@ public class Juego extends AppCompatActivity {
     private int contador = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.juego_vista);
         boton1 = findViewById(R.id.bJuego1);
@@ -126,13 +127,13 @@ public class Juego extends AppCompatActivity {
         String ganador;
 
         if (comprobarVictoria2() && turno) { //victoria jugador1
-            ganador = "Victoria: " + jugador1.getNombre() + " || Derrota: " + jugador2.getNombre();
+            ganador = "Victoria: " + jugador1.getNombre() + " || Derrota: " + jugador2.getNombre() + "\n";
             finalPartida(ganador, jugador1.getNombre().toString(), comprobarVictoria2());
         } else if (comprobarVictoria2() && !turno) { //victoria jugador2
-            ganador = "Victoria: " + jugador2.getNombre() + " || Derrota: " + jugador1.getNombre();
+            ganador = "Victoria: " + jugador2.getNombre() + " || Derrota: " + jugador1.getNombre() + "\n";
             finalPartida(ganador, jugador2.getNombre().toString(), comprobarVictoria2());
         } else if (contador == 9 && !comprobarVictoria2()) { //empate
-            ganador = jugador1.getNombre() + " | EMPATE | " + jugador2.getNombre();
+            ganador = jugador1.getNombre() + " | EMPATE | " + jugador2.getNombre() + "\n";
             String nombre = "EMPATE";
             finalPartida(ganador, nombre, comprobarVictoria2());
         }
@@ -140,7 +141,35 @@ public class Juego extends AppCompatActivity {
     }
 
     public void rejugar(View view){
-
+        boton1.setClickable(true);
+        boton2.setClickable(true);
+        boton3.setClickable(true);
+        boton4.setClickable(true);
+        boton5.setClickable(true);
+        boton6.setClickable(true);
+        boton7.setClickable(true);
+        boton8.setClickable(true);
+        boton9.setClickable(true);
+        boton1.setText("");
+        boton2.setText("");
+        boton3.setText("");
+        boton4.setText("");
+        boton5.setText("");
+        boton6.setText("");
+        boton7.setText("");
+        boton8.setText("");
+        boton9.setText("");
+        boton1.setTag("a");
+        boton2.setTag("b");
+        boton3.setTag("c");
+        boton4.setTag("d");
+        boton5.setTag("e");
+        boton6.setTag("f");
+        boton7.setTag("g");
+        boton8.setTag("h");
+        boton9.setTag("i");
+        contador = 0;
+        botonReJugar.setVisibility(View.INVISIBLE);
     }
 
     private void finalPartida(String ganador, String nombre, boolean haGanado) {
@@ -161,7 +190,7 @@ public class Juego extends AppCompatActivity {
                 boton7.setClickable(false);
                 boton8.setClickable(false);
                 boton9.setClickable(false);
-
+                escribirResultado(ganador);
 
                 //Ha habido un empate
             } else {
@@ -177,6 +206,7 @@ public class Juego extends AppCompatActivity {
                 boton7.setClickable(false);
                 boton8.setClickable(false);
                 boton9.setClickable(false);
+                escribirResultado(ganador);
 
 
             }
@@ -186,5 +216,25 @@ public class Juego extends AppCompatActivity {
         }
 
 
-    }
-}
+    } //END finalPartida
+
+    public void escribirResultado(String ganador){
+
+        Ficheros ficheros = new Ficheros();
+
+        if(Resultado.modoLectura) {
+
+            ficheros.escribirMemoriaInterna(this, ganador);
+
+        } else {
+
+            ficheros.escribirMemoriaInterna(this, ganador);
+
+        }
+
+
+    }//END escribirResultados
+
+
+
+}//END Class

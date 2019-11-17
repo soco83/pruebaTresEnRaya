@@ -1,18 +1,23 @@
 <resources>
     <string name="app_name" translatable="false">pruebaTresEnRaya</string>
     <!--actividad principal  -->
-    <string name="resultados">Resultados</string>
-    <string name="configuraci_n">Configuración</string>
-    <string name="titulo">¡Tres en raya!</string>
-    <string name="jugador1">Jugador</string>
-    <string name="jugador2">Jugador 2</string>
-    <string name="hint1">Jugador 1</string>
-    <string name="hint2">Jugador 2</string>
-    <string name="boton_iniciar">Jugar</string>
+    <string name="resultados"></string>
+    <string name="configuraci_n"></string>
+    <string name="titulo"></string>
+    <string name="jugador1"></string>
+    <string name="jugador2"></string>
+    <string name="hint1"></string>
+    <string name="hint2"></string>
+    <string name="boton_iniciar"></string>
     <!-- actividad Juego-->
-    <string name="victoria">Ganador</string>
-    <string name="turno">Turno del jugador:</string>
-    <string name="reJugar">Volver a jugar</string>
+    <string name="victoria"></string>
+    <string name="turno"></string>
+    <string name="reJugar"></string>
     <!--actividad Resultado-->
-    <string name="tituloR">Resultados</string>
+    <string name="tituloR"></string>
+    <string name="volver_a_jugar"></string>
+    <string name="jugador_1"></string>
+    <string name="jugador_2"></string>
+    <string name="jugar"></string>
+    <string name="tres_en_raya"></string>
 </resources>

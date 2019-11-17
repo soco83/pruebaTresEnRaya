@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">pruebaTresEnRaya</string>
+    <!--actividad principal  -->
+    <string name="resultados">Results</string>
+    <string name="configuraci_n">Settings</string>
+    <string name="titulo">¡Three in a row!</string>
+    <string name="jugador1">Player 1</string>
+    <string name="jugador2">Player 2</string>
+    <string name="hint1">Player 1</string>
+    <string name="hint2">Plaayer 2</string>
+    <string name="boton_iniciar">Play</string>
+    <!-- actividad Juego-->
+    <string name="victoria">Winner</string>
+    <string name="turno">Turn of player:</string>
+    <string name="reJugar">Play again</string>
+    <!--actividad Resultado-->
+    <string name="tituloR">Result</string>
+    <string name="volver_a_jugar">VOLVER A JUGAR!!</string>
+    <string name="jugador_1">PLAYER 1</string>
+    <string name="jugador_2">PLAYER 2</string>
+    <string name="jugar">Play</string>
+    <string name="tres_en_raya">¡ THREE IN A ROW !</string>
+</resources>

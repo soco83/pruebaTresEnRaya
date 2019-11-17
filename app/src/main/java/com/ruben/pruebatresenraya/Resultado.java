@@ -1,12 +1,12 @@
 package com.ruben.pruebatresenraya;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
@@ -14,8 +14,9 @@ public class Resultado extends AppCompatActivity {
 
     private TextView tv_resultado;
     private ArrayList<String> lista = new ArrayList<String>();
+    private String[] listaPreparada;
     private ListView lv;
-    private Escritura leer = new Escritura();
+    private Ficheros leer = new Ficheros();
     public static Boolean modoLectura;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +37,12 @@ public class Resultado extends AppCompatActivity {
     private void rellenarLista(){
         if (modoLectura){
             lista = leer.leerMemoriaInterna(this);
+
         }else{
             if (leer.compruebaAlmacenamientoExt()){
-
+                lista = leer.leerAlamacenamientoExterno();
             }
-            lista = leer.leerAlamacenamientoExterno();
+
         }
     }
 }

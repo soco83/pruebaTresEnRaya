@@ -1,8 +1,5 @@
 package com.ruben.pruebatresenraya;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,6 +12,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Principal extends AppCompatActivity {
 
@@ -127,6 +126,8 @@ public class Principal extends AppCompatActivity {
             intent.putExtra("jugador1",nombre1);
             intent.putExtra("jugador2",nombre2);
             intent.putExtra("tipoJugador",tipoJugador);
+            intent.putExtra("tipoGuardado", Resultado.modoLectura);
+
             startActivity(intent);
 
         }

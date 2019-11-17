@@ -2,6 +2,6 @@
 <resources>
     <string-array name="tipo_guardado">
         <item>Memoria interna</item>
-        <item>tarjeta externa</item>
+        <item>Tarjeta SD</item>
     </string-array>
 </resources>

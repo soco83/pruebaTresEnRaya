@@ -14,7 +14,7 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 
-public class Escritura {
+public class Ficheros {
 
     private boolean hayAlmacenamientoExt = false;
     private boolean almacenamientoExtEscritura = false;
@@ -169,4 +169,4 @@ public class Escritura {
 
 
 
-} //END CLASS  Escritura
+} //END CLASS  Ficheros
