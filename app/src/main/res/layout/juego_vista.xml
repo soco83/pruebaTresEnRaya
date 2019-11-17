@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#406B42"
     tools:context=".Juego">
 
     <Button
@@ -142,6 +143,7 @@
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bJuego8"
         app:layout_constraintVertical_bias="0.0" />
@@ -152,7 +154,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:text="@string/victoria"
-        android:textSize="36sp"
+        android:textColor="#F1EAEA"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:fontFamily="casual"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -163,12 +168,15 @@
         android:id="@+id/tv_nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        app:fontFamily="casual"
+        app:layout_constraintBottom_toBottomOf="@+id/bJuego2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.197"
+        app:layout_constraintTop_toTopOf="@+id/tv_ganador"
+        app:layout_constraintVertical_bias="0.429"
         tools:text="nombre" />
 </androidx.constraintlayout.widget.ConstraintLayout>
