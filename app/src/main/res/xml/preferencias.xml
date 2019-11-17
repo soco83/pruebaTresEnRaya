@@ -3,21 +3,21 @@
     <PreferenceCategory android:title="Guardar" />
     <CheckBoxPreference
         android:defaultValue="false"
-        android:key="check_box_preference_1"
+        android:key="cb_memoria_interna"
         android:title="memoria interna" />
     <CheckBoxPreference
         android:defaultValue="false"
-        android:key="check_box_preference_2"
+        android:key="cb_sd"
         android:title="SD" />
     <PreferenceCategory android:title="Idioma">
 
     </PreferenceCategory>
     <CheckBoxPreference
         android:defaultValue="false"
-        android:key="check_box_preference_3"
+        android:key="cb_espannol"
         android:title="español" />
     <CheckBoxPreference
         android:defaultValue="false"
-        android:key="check_box_preference_4"
+        android:key="cb_ingles"
         android:title="Ingles" />
 </PreferenceScreen>
